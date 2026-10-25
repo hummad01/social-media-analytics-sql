@@ -20,12 +20,11 @@ The database contains seven tables:
 - Q10 defines the influencer group as the top 100 accounts by follower count before grouping those accounts by country.
 - Results depend on the supplied dataset and should be rechecked by running the queries.
 
-## Human-centred query-writing approach
+## SQL Techniques Applied
 
-For each question:
-1. Identify the business decision or curiosity behind the question.
-2. Define the metric clearly (for example, posts + comments for activity).
-3. Identify the tables and their join keys.
-4. Decide the correct grouping level.
-5. Check whether joins can multiply rows and whether `DISTINCT` is needed.
-6. Run the query and interpret the returned result in plain language.
+- **Joins:** Combined users, posts, comments, likes, followers and hashtags to analyse related activity.
+- **Aggregation:** Used `COUNT()`, `SUM()` and `AVG()` to calculate activity and engagement metrics.
+- **Subqueries and CTEs:** Structured multi-step analytical questions.
+- **LEFT JOIN:** Identified users without recorded activity.
+- **Date functions:** Analysed posting patterns by hour and weekday.
+- **Data accuracy:** Considered duplicate rows and aggregation levels when joining multiple tables.
